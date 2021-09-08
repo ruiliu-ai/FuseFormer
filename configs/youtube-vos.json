@@ -1,0 +1,33 @@
+{
+    "seed": 2021,
+    "save_dir": "checkpoints/",
+    "data_loader": {
+        "name": "YouTubeVOS",
+        "data_root": "./data",
+        "w": 432,
+        "h": 240,
+        "sample_length": 5
+    },
+    "losses": {
+        "hole_weight": 1,
+        "valid_weight": 1,
+        "adversarial_weight": 0.01,
+        "GAN_LOSS": "hinge"
+    },
+    "model": {
+        "net": "fuseformer",
+        "no_dis": 0
+    },
+    "trainer": {
+        "type": "Adam",
+        "beta1": 0,
+        "beta2": 0.99,
+        "lr": 1e-4,
+        "batch_size": 8,
+        "num_workers": 2,
+        "log_freq": 100,
+        "save_freq": 1e4,
+        "iterations": 50e4,
+        "niter": 40e4
+    }
+}
