@@ -1,0 +1,6 @@
+opencv-python
+tqdm
+tensorboardX
+scipy
+scikit-image==0.15.0
+pillow==7.2.0
