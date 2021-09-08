@@ -53,7 +53,7 @@ If you find FuseFormer useful in your research, please consider citing:
 ```
 @InProceedings{Liu_2021_FuseFormer,
   title={FuseFormer: Fusing Fine-Grained Information in Transformers for Video Inpainting},
-  author={Liu, Rui and Deng, Hanming and Huang, Yangyi and Shi, Xiaoyu and Lu, Lewei and Sun, Wenxiu and Wang, Xiaogang and Li Hongsheng},
+  author={Liu, Rui and Deng, Hanming and Huang, Yangyi and Shi, Xiaoyu and Lu, Lewei and Sun, Wenxiu and Wang, Xiaogang and Li, Hongsheng},
   booktitle = {International Conference on Computer Vision (ICCV)},
   year={2021}
 }
