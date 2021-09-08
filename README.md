@@ -1,6 +1,6 @@
 # FuseFormer: Fusing Fine-Grained Information in Transformers for Video Inpainting
 
-By [Rui Liu](https://ruiliu-ai.github.io), Hanming Deng, Yangyi Huang, Xiaoyu Shi, Lewei Lu, Wenxiu Sun, Xiaogang Wang, Jifeng Dai, Hongsheng Li. 
+By [Rui Liu](https://ruiliu-ai.github.io), Hanming Deng, Yangyi Huang, Xiaoyu Shi, [Lewei Lu](https://dblp.org/pid/247/6438.html), [Wenxiu Sun](http://wenxiusun.com/), [Xiaogang Wang](https://www.ee.cuhk.edu.hk/~xgwang/), [Jifeng Dai](https://jifengdai.org/), [Hongsheng Li](https://www.ee.cuhk.edu.hk/~hsli/). 
 
 This repo is the official Pytorch implementation of [FuseFormer: Fusing Fine-Grained Information in Transformers for Video Inpainting](https://arxiv.org/abs/2109.02974).
 
