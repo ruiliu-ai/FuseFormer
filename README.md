@@ -4,7 +4,6 @@ By [Rui Liu](https://ruiliu-ai.github.io), Hanming Deng, Yangyi Huang, Xiaoyu Sh
 
 This repo is the official Pytorch implementation of [FuseFormer: Fusing Fine-Grained Information in Transformers for Video Inpainting](https://arxiv.org/abs/2109.02974).
 
-<<<<<<< HEAD
 ## Introduction
 <img src='imgs/pipeline.png' width="900px">
 
@@ -49,13 +48,6 @@ mkdir checkpoints
 python test.py -c checkpoints/fuseformer.pth -v data/DAVIS/JPEGImages/blackswan -m data/DAVIS/Annotations/blackswan
 ```
 
-=======
-Coming soon.
-
-## Introduction
-<img src='imgs/pipeline.png' width="900px">
-
->>>>>>> fab4dcbb9e27bc1ca819b1de0006611433f0965c
 ## Citing FuseFormer
 If you find FuseFormer useful in your research, please consider citing:
 ```
@@ -67,9 +59,5 @@ If you find FuseFormer useful in your research, please consider citing:
 }
 ```
 
-<<<<<<< HEAD
 ## Acknowledement
-This code relies heavily on the video inpainting framework from [spatial-temporal transformer net](https://github.com/researchmm/STTN). 
-=======
->>>>>>> fab4dcbb9e27bc1ca819b1de0006611433f0965c
-
+This code borrows heavily from the video inpainting framework [spatial-temporal transformer net](https://github.com/researchmm/STTN). 
