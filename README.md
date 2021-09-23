@@ -48,6 +48,24 @@ mkdir checkpoints
 python test.py -c checkpoints/fuseformer.pth -v data/DAVIS/JPEGImages/blackswan -m data/DAVIS/Annotations/blackswan
 ```
 
+## Evaluation
+You can follow [free-form mask generation scheme](https://github.com/JiahuiYu/generative_inpainting) for synthesizing random masks.
+
+Or just download [our prepared stationary masks](https://drive.google.com/file/d/1lV_EZafayBF0QUM7socbKW7HIxxSaoeU/view?usp=sharing) and unzip it to data folder. 
+```
+mv random_mask_stationary_w432_h240 data/
+```
+
+Then you need to download [pre-trained model](https://drive.google.com/file/d/1A-ilDsXZCVhWh2_erApyL7C0jXhaeTjR/view?usp=sharing) for evaluating [VFID](https://github.com/deepmind/kinetics-i3d). 
+```
+mv i3d_rgb_imagenet.pt checkpoints/
+```
+
+### Evaluation script
+```
+python evaluate.py --model fuseformer --ckpt checkpoints/fuseformer.pth --width 432 --height 240
+```
+
 ## Citing FuseFormer
 If you find FuseFormer useful in your research, please consider citing:
 ```
