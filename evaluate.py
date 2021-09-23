@@ -173,7 +173,7 @@ def get_i3d_activations(batched_video, target_endpoint='Logits', flatten=True, g
 def get_frame_mask_list(args):
     #data_root = "./data/YouTubeVOS/"
     data_root = "./data/DATASET_DAVIS"
-    mask_dir = "./random_mask_stationary_w432_h240"
+    mask_dir = "./data/random_mask_stationary_w432_h240"
     mask_folder = sorted(os.listdir(mask_dir))
     mask_list = [os.path.join(mask_dir, name) for name in mask_folder]
     
