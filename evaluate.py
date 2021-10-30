@@ -31,11 +31,12 @@ from model.i3d import InceptionI3d
 from scipy import linalg
 
 
-parser = argparse.ArgumentParser(description="STTN")
+parser = argparse.ArgumentParser(description="FuseFormer")
 parser.add_argument("-v", "--video", type=str, required=False)
 parser.add_argument("-m", "--mask",   type=str, required=False)
 parser.add_argument("-c", "--ckpt",   type=str, required=True)
-parser.add_argument("--model", type=str, default='sttn')
+parser.add_argument("--model", type=str, default='fuseformer')
+parser.add_argument("--dataset", type=str, default='davis')
 parser.add_argument("--width", type=int, default=432)
 parser.add_argument("--height", type=int, default=240)
 parser.add_argument("--outw", type=int, default=432)
@@ -171,17 +172,21 @@ def get_i3d_activations(batched_video, target_endpoint='Logits', flatten=True, g
     return feat
 
 def get_frame_mask_list(args):
-    #data_root = "./data/YouTubeVOS/"
-    data_root = "./data/DATASET_DAVIS"
-    mask_dir = "./data/random_mask_stationary_w432_h240"
+    if args.dataset == 'davis':
+        data_root = "./data/DATASET_DAVIS"
+        mask_dir = "./data/random_mask_stationary_w432_h240"
+        frame_dir = os.path.join(data_root, "JPEGImages", "480p")
+    elif args.dataset == 'youtubevos':
+        data_root = "./data/YouTubeVOS/"
+        mask_dir = "./data/random_mask_stationary_youtube_w432_h240"
+        frame_dir = os.path.join(data_root, "test_all_frames", "JPEGImages")
+
     mask_folder = sorted(os.listdir(mask_dir))
     mask_list = [os.path.join(mask_dir, name) for name in mask_folder]
-    
-    frame_dir = os.path.join(data_root, "JPEGImages", "480p")
     frame_folder = sorted(os.listdir(frame_dir))
     frame_list = [os.path.join(frame_dir, name) for name in frame_folder]
 
-    print("[Finish building dataset]")
+    print("[Finish building dataset {}]".format(args.dataset))
     return frame_list, mask_list
 
 # sample reference frames from the whole video 
