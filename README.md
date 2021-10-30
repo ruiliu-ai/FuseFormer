@@ -27,10 +27,12 @@ pip install -r requirements.txt
 ## Training
 
 ### Dataset preparation
-Download datasets ([YouTube-VOS](https://competitions.codalab.org/competitions/19544) and [DAVIS](https://davischallenge.org/davis2017/code.html)) into the data folder.
+Download datasets ([YouTube-VOS](https://competitions.codalab.org/competitions/20127) and [DAVIS](https://davischallenge.org/davis2017/code.html)) into the data folder.
+
 ```
 mkdir data
 ```
+Note: We use [YouTube Video Object Segmentation dataset **2019** version](https://youtube-vos.org/dataset/).
 
 ### Training script
 ```
