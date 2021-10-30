@@ -67,6 +67,7 @@ mv i3d_rgb_imagenet.pt checkpoints/
 python evaluate.py --model fuseformer --ckpt checkpoints/fuseformer.pth --dataset davis --width 432 --height 240
 python evaluate.py --model fuseformer --ckpt checkpoints/fuseformer.pth --dataset youtubevos --width 432 --height 240
 ```
+For evaluating warping error, please refer to https://github.com/phoenix104104/fast_blind_video_consistency
 
 ## Citing FuseFormer
 If you find FuseFormer useful in your research, please consider citing:
